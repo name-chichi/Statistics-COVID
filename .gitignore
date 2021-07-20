@@ -4,7 +4,7 @@
 
 # chichi update
 .idea/
-newyork_taxi/
+data/
 
 ### Django ###
 *.log
