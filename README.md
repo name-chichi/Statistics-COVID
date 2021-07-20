@@ -1,4 +1,4 @@
-# Project1
+# Statistics-COVID-19
 
 - COVID19 로 인한 변화된 사회상 분석
 
