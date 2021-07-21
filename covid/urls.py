@@ -22,9 +22,8 @@ from covid import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('dashboard1', views.dashboard1, name='dashboard1'),
-    path('dashboard2', views.dashboard2, name='dashboard2'),
-    path('dashboard3', views.dashboard3, name='dashboard3'),
     path('openingclosing', views.openingclosing, name='openingclosing'),
     path('openingclosings', views.openingclosings, name='openingclosings'),
+    path('region', views.region, name='region'),
+    path('regions', views.regions, name='regions'),
 ]

@@ -18,20 +18,15 @@ class Restaurant:
         food_health_closing.index = pd.to_datetime(food_health_closing['폐업일자'], format='%Y%m%d')
         monthly_closing = food_health_closing['상세영업상태명'].resample('M').count()
 
-        index_data = monthly_opening.index.strftime('%m/%d/%y').tolist()
+        index_data = monthly_opening.index.strftime('%Y-%m').tolist()
         opening_data = monthly_opening.tolist()
         closing_data = monthly_closing.tolist()
 
-        result = []
-        headers = ['Day Index', 'opening', 'closing']
-        result.append(headers)
-        for i in range(0, len(index_data)):
-            temp_list = []
-            temp_list.append(index_data[i])
-            temp_list.append(opening_data[i])
-            temp_list.append(closing_data[i])
-            result.append(temp_list)
-
+        result = {
+            'index': index_data,
+            'opening': opening_data,
+            'closing': closing_data,
+        }
         print(result)
         return result
 
